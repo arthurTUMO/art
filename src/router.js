@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ExerciseOne from './views/ExerciseOne.vue'
-import ExerciseTwo from './views/ExerciseTwo.vue'
-import ExerciseThree from './views/ExerciseThree.vue'
-import ExerciseFour from './views/ExerciseFour.vue'
-import ExerciseFive from './views/ExerciseFive.vue'
+import Home from './views/Home.vue'
+import About from './views/About.vue'
+import Browse from './views/Browse.vue'
 
 Vue.use(Router)
 
@@ -14,28 +12,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'exercise-one',
-      component: ExerciseOne
+      name: 'home',
+      component: Home
     },
     {
-      path: '/exercise-two',
-      name: 'exercise-two',
-      component: ExerciseTwo
+      path: '/about',
+      name: 'about',
+      component: About
     },
     {
-      path: '/exercise-three',
-      name: 'exercise-three',
-      component: ExerciseThree
-    },
-    {
-      path: '/exercise-four',
-      name: 'exercise-four',
-      component: ExerciseFour
-    },
-    {
-      path: '/exercise-five',
-      name: 'exercise-five',
-      component: ExerciseFive
+      path: '/browse',
+      name: 'browse',
+      component: Browse
     }
   ]
 })

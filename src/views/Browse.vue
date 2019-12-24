@@ -1,15 +1,16 @@
 <template>
-  <v-container id="home">
+  <v-container id="browse">
   </v-container>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Browse',
 
   data: () => ({
   }),
   methods: {
   }
+
 }
 </script>

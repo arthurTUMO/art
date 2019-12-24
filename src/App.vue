@@ -1,19 +1,16 @@
 <template>
   <v-app>
-    <v-content>
-          <v-toolbar app color="#2900AA" dark>
-           <img :src="require('@/assets/logo.png')" height="100"/>
-           <v-toolbar-title>Art</v-toolbar-title>
-           <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-md-and-down">
-            <v-btn class="mx-1" text to="/">Home</v-btn >
-            <v-btn class="mx-1" text to="/exercise-two">About</v-btn >
-            <v-btn class="mx-1" text to="/exercise-three">Browse</v-btn >
-            <v-btn class="mx-1" text to="/exercise-four">Smth</v-btn >
-            <v-btn class="mx-1" text to="/exercise-five">Smth</v-btn >
-          </v-toolbar-items>
-            <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-          </v-toolbar>
+    <v-app-bar app color="#2900AA" dark>
+      <img :src="require('@/assets/logo.png')" height="100"/>
+      <v-toolbar-title>Art</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-md-and-down">
+        <v-btn class="mx-1" text to="/">Home</v-btn >
+        <v-btn class="mx-1" text to="/about">About</v-btn >
+        <v-btn class="mx-1" text to="/browse">Browse</v-btn >
+      </v-toolbar-items>
+      <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -22,31 +19,25 @@
       <v-list
         dense
       >
-        <v-list-item-group
+        <!-- <v-list-item-group
           v-model="group"
-        >
+        > -->
           <v-list-item to="/">
-            <v-list-item-title>1. Basic Variables</v-list-item-title>
+            <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/exercise-two">
-            <v-list-item-title>2. Composing Components</v-list-item-title>
+          <v-list-item to="/about">
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/exercise-three">
-            <v-list-item-title>3. V-for, Forms</v-list-item-title>
+          <v-list-item to="/browse">
+            <v-list-item-title>Browse</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/exercise-four">
-            <v-list-item-title>4. Form Validation</v-list-item-title>
-          </v-list-item>
-           <v-list-item to="/exercise-five">
-            <v-list-item-title>5. App Bar</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+        <!-- </v-list-item-group> -->
       </v-list>
     </v-navigation-drawer>
-
+    <v-content>
       <router-view/>
     </v-content>
   </v-app>
