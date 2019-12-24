@@ -19,9 +19,9 @@
       <v-list
         dense
       >
-        <!-- <v-list-item-group
+        <v-list-item-group
           v-model="group"
-        > -->
+        >
           <v-list-item to="/">
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
@@ -34,7 +34,7 @@
             <v-list-item-title>Browse</v-list-item-title>
           </v-list-item>
 
-        <!-- </v-list-item-group> -->
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
     <v-content>
