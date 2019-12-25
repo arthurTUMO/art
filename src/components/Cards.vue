@@ -2,9 +2,9 @@
   <v-container>
     <v-row outlined color="blue">
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img1.jpg">
-            <v-card-title>Zvartnots cathedral</v-card-title>
+            <v-card-title>Zvartnots Cathedral</v-card-title>
           </v-img>
           <v-card-subtitle class="pb-0">Number 1</v-card-subtitle>
           <v-card-text
@@ -17,7 +17,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img2.jpg">
             <v-card-title>Opera</v-card-title>
           </v-img>
@@ -32,7 +32,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img3.jpg">
             <v-card-title>Cascade</v-card-title>
           </v-img>
@@ -47,7 +47,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img4.jpg">
             <v-card-title>Republic Square</v-card-title>
           </v-img>
@@ -64,7 +64,7 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img5.jpg">
             <v-card-title>Mesrop Mahtots</v-card-title>
           </v-img>
@@ -79,7 +79,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img6.jpg">
             <v-card-title>Raffi</v-card-title>
           </v-img>
@@ -94,7 +94,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img7.jpg">
             <v-card-title>Paruyr Sevak</v-card-title>
           </v-img>
@@ -113,7 +113,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img8.jpg">
             <v-card-title>Hovhannes Tumanyan</v-card-title>
           </v-img>
@@ -134,7 +134,7 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img9.jpg">
             <v-card-title>Gikor</v-card-title>
           </v-img>
@@ -151,7 +151,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img10.jpg">
             <v-card-title>The tango of our childhood</v-card-title>
           </v-img>
@@ -168,7 +168,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img11.jpg">
             <v-card-title>The men</v-card-title>
           </v-img>
@@ -186,7 +186,7 @@
         </v-card>
       </v-col>
       <v-col cols="3">
-        <v-card class="mx-auto overlay" max-width="400">
+        <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img12.jpg">
             <v-card-title>The song of the old days</v-card-title>
           </v-img>
@@ -217,7 +217,7 @@ export default {
 .block-with-text {
   overflow: hidden;
   line-height: 2em;
-  max-height: 4em;
+  max-height: 3em;
 }
 .overlay .v-image__image{
 filter: blur(3px);
