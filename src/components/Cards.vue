@@ -65,7 +65,7 @@
     <v-row>
       <v-col cols="3">
         <v-card shaped class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img5.jpg">
+          <v-img class="white--text align-end" height="200px" src="../assets/img/cards/img5.png">
             <v-card-title>Mesrop Mahtots</v-card-title>
           </v-img>
           <v-card-subtitle class="pb-0 block-with-text">Number 5</v-card-subtitle>
