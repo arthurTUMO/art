@@ -2,13 +2,13 @@
   <div>
     <v-carousel
       dark
-      height="500"
       show-arrows-on-hover
       hide-delimiters
       continuous
       cycle
       interval="10000"
       touch
+      :class="{'min-height=340': $vuetify.breakpoint.mdAndDown, 'min-height=500': $vuetify.breakpoint.mdAndUp}"
     >
       <v-carousel-item
         v-for="(item,i) in items"
@@ -20,9 +20,9 @@
        <v-jumbotron dark>
             <v-container fill-height>
               <v-layout align-center>
-                <v-flex>
-                  <h2 class="display-3 white-text">{{ item.title }}</h2>
-                  <h3 class="subheading white-text">{{ item.description }}</h3>
+                <v-flex :class="{'ma-12': $vuetify.breakpoint.smAndDown, 'mx-5': $vuetify.breakpoint.mdAndUp}">
+                  <h2 :class="{'display-1': $vuetify.breakpoint.smAndDown, 'display-3': $vuetify.breakpoint.mdAndUp}" class = "white-text">{{ item.title }}</h2>
+                  <h3 :class="{'display-0': $vuetify.breakpoint.smAndDown, 'display-1': $vuetify.breakpoint.mdAndUp}" class="subheading white-text">{{ item.description }}</h3>
                 </v-flex>
               </v-layout>
             </v-container>
@@ -30,13 +30,13 @@
       </v-carousel-item>
     </v-carousel>
     <div class="divider">
-      <marquee class = "display-1" behavior="scroll" direction="left">Interesting fact: Armenia was the first country to have adopted Christianity as its state religion
+      <marquee :class="{'display-0': $vuetify.breakpoint.smAndDown, 'display-1': $vuetify.breakpoint.smAndUp}" class = "text-uppercase my-2" behavior="scroll" direction="left">Interesting fact: Armenia was the first country to have adopted Christianity as its state religion
 </marquee>
     </div>
       <v-parallax
            height="300"
            src="../assets/img/parallax/hraparak.jpg">
-          <h1 class="text-center text-uppercase">The Treasures of Armenia</h1>
+          <h2 :class="{'display-0': $vuetify.breakpoint.smAndDown, 'display-1': $vuetify.breakpoint.mdAndUp}" class = "text-center text-uppercase">The Treasures of Armenia</h2>
       </v-parallax>
     <v-container>
       <Cards/>
@@ -84,23 +84,23 @@ export default {
     items: [
       {
         src: require('../assets/img/slider/architecture.jpg'),
-        title: "Armenian Architecture",
-        description: "Read More in this website"
+        title: 'Armenian Architecture',
+        description: 'Read More in this website'
       },
       {
         src: require('../assets/img/slider/literature.jpg'),
-         title: "Armenian Literature",
-        description: "Read More in this website"
+        title: 'Armenian Literature',
+        description: 'Read More in this website'
       },
       {
         src: require('../assets/img/slider/music.jpg'),
-        title: "Armenian Music",
-        description: "Read More in this website"
+        title: 'Armenian Music',
+        description: 'Read More in this website'
       },
       {
         src: require('../assets/img/slider/carpet.png'),
-        title: "Armenian Carpets",
-        description: "Read More in this website"
+        title: 'Armenian Carpets',
+        description: 'Read More in this website'
       }
     ],
     icons: [
@@ -114,19 +114,17 @@ export default {
   components: {
     Cards
   },
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 
 <style>
 .v-carousel .v-image__image,
-.v-parallax__image-container{
-filter: brightness(0.5);
+.v-parallax__image-container {
+  filter: brightness(0.5);
 }
-.white-text{
-  color:white;
+.white-text {
+  color: white;
   justify-content: start;
   text-align: left;
 }

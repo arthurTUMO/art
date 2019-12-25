@@ -1,42 +1,51 @@
 <template>
   <div id="browse">
-     <v-footer
-    color="grey darken-1"
+      <v-footer
+    dark
     padless
   >
-    <v-row
-      justify="center"
-      no-gutters
+    <v-card
+      flat
+      tile
+      class="grey darken-2 white--text text-center"
     >
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
-      >
-       {{ link }}
-      </v-btn>
-      <v-col
-        class="grey darken-3 py-4 text-center white--text"
-        cols="12"
-      >
-        {{ new Date().getFullYear() }} — <strong>TUMO</strong>
-      </v-col>
-    </v-row>
+      <v-card-text>
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="mx-4 white--text"
+          icon
+        >
+          <v-icon size="24px">{{ icon }}</v-icon>
+        </v-btn>
+      </v-card-text>
+
+      <v-card-text class="white--text pt-0">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text grey darken-3">
+        {{ new Date().getFullYear() }} — <strong>TUMO WORKSHOP</strong>
+      </v-card-text>
+    </v-card>
   </v-footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Browse',
-
+  name: 'About',
   data: () => ({
-  }),
-  methods: {
-  }
-
+     icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-google-plus',
+        'mdi-linkedin',
+        'mdi-instagram',
+      ],
+  })
 }
 </script>
+

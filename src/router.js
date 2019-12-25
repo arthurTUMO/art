@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Browse from './views/Browse.vue'
-
+import Display from './views/Display.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +24,11 @@ export default new Router({
       path: '/browse',
       name: 'browse',
       component: Browse
+    },
+    {
+      path: '/display',
+      name: 'display',
+      component: Display
     }
   ]
 })
