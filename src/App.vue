@@ -8,6 +8,7 @@
        <v-btn class="mx-1" text to="/"> <v-icon class = "mr-2" color="white">mdi-home </v-icon> Home</v-btn >
         <v-btn class="mx-1" text to="/about"><v-icon class = "mr-2" color="white">mdi-information </v-icon> About</v-btn >
         <v-btn class="mx-1" text to="/browse"><v-icon class = "mr-2" color="white">mdi-map-marker </v-icon> Browse</v-btn >
+        <v-btn class="mx-1" text to="/display"><v-icon class = "mr-2" color="white">mdi-map-marker </v-icon> Display</v-btn >
     <v-toolbar color="#2900AA" flat>
       <v-text-field
         hide-details
@@ -79,6 +80,7 @@ export default {
     }
   },
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     Cards
   }
 }
