@@ -17,16 +17,23 @@
         transition="scroll-x-transition"
         reverse-transition="scroll-x-reverse-transition"
       >
-      <v-container fluid class = "mx-2">
-      <h2 class="text-uppercase slider-title">{{ text }}</h2>
-      <p class="text-uppercase slider-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </v-container>
+       <v-jumbotron dark>
+            <v-container fill-height>
+              <v-layout align-center>
+                <v-flex>
+                  <h2 class="display-3 white-text">{{ item.title }}</h2>
+                  <h3 class="subheading white-text">{{ item.description }}</h3>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-jumbotron>
+
       </v-carousel-item>
     </v-carousel>
       <v-parallax
            height="300"
            src="../assets/img/parallax/heading.jpg">
-          <h2 class="text-center text-uppercase">Armenian famous places and people</h2>
+          <h1 class="text-center text-uppercase">The Treasures of Armenia</h1>
       </v-parallax>
     <v-container>
       <Cards/>
@@ -39,19 +46,26 @@ import Cards from '../components/Cards.vue'
 export default {
   name: 'Home',
   data: () => ({
-    text: "Title",
     items: [
       {
-        src: require('../assets/img/slider/architecture.jpg')
+        src: require('../assets/img/slider/architecture.jpg'),
+        title: "Armenian Architecture",
+        description: "Read More in this website"
       },
       {
-        src: require('../assets/img/slider/literature.jpg')
+        src: require('../assets/img/slider/literature.jpg'),
+         title: "Armenian Literature",
+        description: "Read More in this website"
       },
       {
-        src: require('../assets/img/slider/music.jpg')
+        src: require('../assets/img/slider/music.jpg'),
+        title: "Armenian Music",
+        description: "Read More in this website"
       },
       {
-        src: require('../assets/img/slider/carpet.png')
+        src: require('../assets/img/slider/carpet.png'),
+        title: "Armenian Carpets",
+        description: "Read More in this website"
       }
     ]
   }),
@@ -69,9 +83,12 @@ export default {
 .v-parallax__image-container{
 filter: brightness(0.5);
 }
-.slider-title{
+.white-text{
   color:white;
   justify-content: start;
   text-align: left;
+}
+body{
+  background: #f6f6f6;
 }
 </style>
