@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar height="50" app color="#3d3d3d" dark>
+    <v-app-bar height="50" app color="#3d3d3d" dark >
       <v-btn class = "mx-3" width="0" height="0" to="/">
       <img :src="require('@/assets/logo.png')" height="100"/>
       </v-btn>
