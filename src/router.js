@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Browse from './views/Browse.vue'
 import Display from './views/Display.vue'
+
 Vue.use(Router)
 
 export default new Router({

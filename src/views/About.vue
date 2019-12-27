@@ -8,8 +8,22 @@
     </p>
   </v-col>
   <v-col cols="12" xl="5" lg="6">
-    <v-img src = "@/assets/img/about/TUMO.jpg"></v-img>
-  </v-col>
+   <v-img
+      src="@/assets/img/about/TUMO.jpg"
+      lazy-src="@/assets/img/about/TUMO.jpg"
+      class="grey lighten-2"
+    >
+      <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img>
+</v-col>
 </v-row>
 
 
@@ -18,27 +32,26 @@
   <h1 class="text-center" style="font-family: algerian; font-size:60px;">Our Team</h1>
     <v-row>
     <v-col cols="12" lg ="4" md="6" sm="12">
-        <v-card color= "#ABABAB" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" height="260px" src="../assets/img/cards/logo.png">
+        <v-card color= "#008DD1" class="mx-auto overlay" max-width="400">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/about/Vahe.jpg">
             <v-card-title style="font-family: cursive;">Vahe Khachatryan</v-card-title>
           </v-img>
-          <v-card color="#D6D1D1" class="ma-7">
-            <v-card-text
-  class="text--primary"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore debitis corporis, blanditiis totam maxime placeat iste veniam quo maiores non? Voluptates molestias libero labore distinctio accusantium temporibus quaerat. Fuga?</v-card-text>
+          <v-card color="#05aeff" class="ma-7">
+            <v-card-text style="color:white"
+          >I'm Vahe Khachatryan. I'm 16 years old. I've been living in Armenia since i was born. I've been learning in TUMO for 3 and half years. It's still fun to go there, because without it i wouldn't be making this website :)</v-card-text>
           </v-card>
           <v-card-actions>
           </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12"  lg ="4" md="6" sm="12">
-        <v-card color= "#ABABAB" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" height="260px" src="../assets/img/cards/logo.png">
+        <v-card color= "#008DD1" class="mx-auto overlay" max-width="400">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/cards/logo.png">
             <v-card-title style="font-family: cursive;">Gor Margaryan</v-card-title>
           </v-img>
-          <v-card color="#D6D1D1" class="ma-7">
+          <v-card color="#05aeff" class="ma-7">
             <v-card-text
-  class="text--primary"
+ style="color:white"
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore debitis corporis, blanditiis totam maxime placeat iste veniam quo maiores non? Voluptates molestias libero labore distinctio accusantium temporibus quaerat. Fuga?</v-card-text>
           </v-card>
           <v-card-actions>
@@ -46,13 +59,13 @@
         </v-card>
       </v-col>
       <v-col cols="12"  lg="4" md="12" sm="12">
-        <v-card color= "#ABABAB" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" height="260px" src="../assets/img/cards/logo.png">
+        <v-card color= "#008DD1" class="mx-auto overlay" max-width="400">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/cards/logo.png">
             <v-card-title style="font-family: cursive;">Ani Avetisyan</v-card-title>
           </v-img>
-          <v-card color="#D6D1D1" class="ma-7">
+          <v-card color="#05aeff" class="ma-7">
             <v-card-text
-  class="text--primary"
+  style="color:white"
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore debitis corporis, blanditiis totam maxime placeat iste veniam quo maiores non? Voluptates molestias libero labore distinctio accusantium temporibus quaerat. Fuga?</v-card-text>
           </v-card>
           <v-card-actions>
