@@ -12,8 +12,8 @@
 <v-row justify="center" align="center">
   <v-col cols="12" xl="7" lg="6">
     <h2 class = "mx-12">What are we doing?</h2>
-    <p class = "mx-12">This site contains a wealth of information on various branches of Armenian art. It will take you to a unique world of art, where you will tangibly feel a centuries-old breath of Armenian art. You will be with the artists who bridge the past and present, you will know all about their period of life and left inharitance. Here you will find information not only about spiritual treasures, but also monuments representing the flight of armenian architectural thought, such as Zvartnots Cathedral, Republic Square, Opera and so on. So here is armenian art in all its luxury.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum aliquet libero in consequat. Maecenas ut ligula et est commodo lacinia in et ante. In mattis eu mi a aliquam. Aliquam ac est leo. Curabitur elementum ipsum ut pharetra feugiat. Aenean pretium ligula massa, ut ultrices ipsum ultricies at. Nullam sagittis egestas dapibus. Phasellus vestibulum, lacus eget viverra ultricies, eros nisi dignissim velit, non blandit nulla ligula et nunc. Nullam malesuada diam a convallis facilisis. Cras at leo congue, mollis orci ac, lacinia augue.
+    <p class = "mx-12">Yerevan is the capital of the Republic of Armenia and is the 12th capital of the historical Armenia.  It has seen a lot before becoming the capital of Armenia. Yerevan is also one of the most ancient cities of the world. There are numerous museums, monuments, churches in Yerevan which evidence the high spiritual, cultural and scientific status of the city. Due to rich historic and cultural heritage, unique architecture, developing urban infrastructure and the hospitality so characteristic of Armenians, Yerevan attracts more and more tourists expanding the geography of tourism market and strengthening its positions on the map of best touristic directions.  Yerevan is a mixture of ancient, old and new.
+     <br> This site contains a wealth of information on various branches of Armenian art. It will take you to a unique world of art, where you will tangibly feel a centuries-old breath of Armenian art. You will be with the artists who bridge the past and present, you will know all about their period of life and left inharitance. Here you will find information not only about spiritual treasures, but also monuments representing the flight of armenian architectural thought, such as Zvartnots Cathedral, Republic Square, Opera and so on. So here is armenian art in all its luxury.
     </p>
   </v-col>
   <v-col cols="12" xl="5" lg="6">
@@ -43,7 +43,6 @@
            src="../assets/img/parallax/team.jpg">
          <h1 class="text-center" style="font-family: algerian; font-size:60px;">Our Team</h1>
       </v-parallax>
- 
     <v-row justify="center" align="center">
     <v-col cols="12" lg ="4" md="6" sm="12">
         <v-card shaped color= "#008DD1" class="mx-auto overlay" max-width="400">
@@ -89,13 +88,12 @@
       </v-col>
       <v-col cols="12"  lg ="4" md="6" sm="12">
         <v-card shaped color= "#008DD1" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="cards/logo.png">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/about/Gor.jpg">
             <v-card-title style="font-family: cursive;">Gor Margaryan</v-card-title>
           </v-img>
           <v-card color="#05aeff" class="ma-7">
-            <v-card-text
- style="color:white"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore debitis corporis, blanditiis totam maxime placeat iste veniam quo maiores non? Voluptates molestias libero labore distinctio accusantium temporibus quaerat. Fuga?</v-card-text>
+            <v-card-text style="color:white"
+          >I'm Gor Margaryan. I'm 13 years old. I've been living in Armenia since i was born. I've been learning in TUMO for a year. It's still fun to go there, because without it i wouldn't be making this website :)</v-card-text>
           </v-card>
           <v-card-actions>
       <v-spacer></v-spacer>
@@ -132,13 +130,12 @@
       </v-col>
       <v-col cols="12"  lg="4" md="12" sm="12">
         <v-card shaped color= "#008DD1" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="cards/logo.png">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/about/Ani.jpg">
             <v-card-title style="font-family: cursive;">Ani Avetisyan</v-card-title>
           </v-img>
           <v-card color="#05aeff" class="ma-7">
-            <v-card-text
-  style="color:white"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore debitis corporis, blanditiis totam maxime placeat iste veniam quo maiores non? Voluptates molestias libero labore distinctio accusantium temporibus quaerat. Fuga?</v-card-text>
+            <v-card-text style="color:white"
+          >I'm Ani Avetisyan. I'm 14 years old. I've been living in Armenia since i was born. I've been learning in TUMO for 2 years. It's still fun to go there, because without it i wouldn't be making this website :)</v-card-text>
           </v-card>
            <v-card-actions>
       <v-spacer></v-spacer>
@@ -233,7 +230,7 @@ export default {
       'mdi-instagram'
     ],
     show: false,
-    fab:false,
+    fab: false
   }),
   methods: {
     onScroll (e) {
