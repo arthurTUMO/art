@@ -49,7 +49,11 @@
           </v-list-item>
 
           <v-list-item to="/browse">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-image-filter-hdr </v-icon>Browse</v-list-item-title>
+            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-map-marker </v-icon>Browse</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item to="/contact">
+            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-help </v-icon>Contact</v-list-item-title>
           </v-list-item>
     <v-toolbar>
       <v-text-field
