@@ -10,6 +10,7 @@
         <v-btn class="mx-1" text to="/"> <v-icon class = "mr-2" color="white">mdi-home </v-icon> Home</v-btn>
         <v-btn class="mx-1" text to="/about"><v-icon class = "mr-2" color="white">mdi-information </v-icon> About</v-btn >
         <v-btn class="mx-1" text to="/browse"><v-icon class = "mr-2" color="white">mdi-map-marker </v-icon> Browse</v-btn >
+         <v-btn class="mx-1" text to="/contact"><v-icon class = "mr-2" color="white">mdi-help </v-icon> Contact</v-btn >
         <v-btn class="mx-1" text to="/display"><v-icon class = "mr-2" color="white">mdi-human </v-icon> Display</v-btn >
     <v-toolbar color="#3d3d3d" flat height="auto">
       <v-text-field
