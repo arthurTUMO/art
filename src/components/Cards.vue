@@ -36,6 +36,9 @@ export default {
       console.log(resp.data['cards'])
       this.cards = resp.data['cards']
     }
+  },
+  created () {
+    this.getArt()
   }
 }
 </script>
