@@ -31,7 +31,7 @@ export default {
   }),
   methods: {
     getArt: async function () {
-      let resp = await axios.get('https://armenian-art.herokuapp.com/getArt')
+      let resp = await axios.get('http://localhost:4000/getArt')
       console.log(resp.data)
       console.log(resp.data['cards'])
       this.cards = resp.data['cards']

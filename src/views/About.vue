@@ -89,7 +89,7 @@
       </v-col>
       <v-col cols="12"  lg ="4" md="6" sm="12">
         <v-card shaped color= "#008DD1" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/cards/logo.png">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="cards/logo.png">
             <v-card-title style="font-family: cursive;">Gor Margaryan</v-card-title>
           </v-img>
           <v-card color="#05aeff" class="ma-7">
@@ -132,7 +132,7 @@
       </v-col>
       <v-col cols="12"  lg="4" md="12" sm="12">
         <v-card shaped color= "#008DD1" class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="../assets/img/cards/logo.png">
+          <v-img class="white--text align-end" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" height="260px" src="cards/logo.png">
             <v-card-title style="font-family: cursive;">Ani Avetisyan</v-card-title>
           </v-img>
           <v-card color="#05aeff" class="ma-7">
