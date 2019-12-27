@@ -31,7 +31,7 @@ export default {
   }),
   methods: {
     getArt: async function () {
-      let resp = await axios.get('http://localhost:4000/getArt')
+      let resp = await axios.get('https://armenian-art.herokuapp.com/getArt')
       console.log(resp.data)
       console.log(resp.data['cards'])
       this.cards = resp.data['cards']
@@ -45,8 +45,8 @@ export default {
 <style>
 .block-with-text {
   overflow: hidden;
-  line-height: 2em;
-  max-height: 3em;
+  line-height: 4em;
+  max-height: 2em;
 }
 .overlay .v-image__image{
 filter: blur(3px);
