@@ -45,8 +45,8 @@ export default {
 <style>
 .block-with-text {
   overflow: hidden;
-  line-height: 4em;
-  max-height: 2em;
+  line-height: 2em;
+  max-height: 3em;
 }
 .overlay .v-image__image{
 filter: blur(3px);
