@@ -98,7 +98,7 @@ import Cards from '../components/Cards.vue'
 export default {
   name: 'Home',
   data: () => ({
-    fab:false,
+    fab: false,
     items: [
       {
         src: require('../assets/img/slider/architecture.jpg'),
@@ -130,9 +130,9 @@ export default {
     ],
     facts: [
       {
-        id:1,text:"Interesting fact: Armenia was the first country to have adopted Christianity as its state religion"
+        id: 1, text: 'Interesting fact: Armenia was the first country to have adopted Christianity as its state religion'
       }
-    ],
+    ]
   }),
   components: {
     Cards
@@ -148,13 +148,13 @@ export default {
     }
   },
   computed: {
-     options () {
-        return {
-          duration: 1000,
-          offset: 90,
-          easing: 'easeInOutQuart'
-        }
-      },
+    options () {
+      return {
+        duration: 1000,
+        offset: 90,
+        easing: 'easeInOutQuart'
+      }
+    }
   }
 }
 </script>
