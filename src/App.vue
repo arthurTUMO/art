@@ -17,6 +17,7 @@
         hide-details
         prepend-icon="mdi-web"
         single-line
+        label = "Search for Places"
       ></v-text-field>
 
       <v-btn icon>
@@ -32,7 +33,6 @@
       temporary
       height="auto"
       width="100%"
-      right
     >
        <v-list
         dense
@@ -61,6 +61,7 @@
         hide-details
         prepend-icon="mdi-web"
         single-line
+       label = "Search for Places"
       ></v-text-field>
 
       <v-btn icon>

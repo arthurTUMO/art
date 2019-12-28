@@ -169,9 +169,6 @@ export default {
   justify-content: start;
   text-align: left;
 }
-body{
-  background: #3d3d3d;
-}
 .divider{
   background: #3d3d3d;
   color:white;
