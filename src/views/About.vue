@@ -3,6 +3,15 @@
      <v-parallax
            height="300"
            src="../assets/img/parallax/mountain.jpg">
+           <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
          <h1 class="text-center" style="font-family: algerian; font-size:60px;">Our Mission</h1>
       </v-parallax>
  <div class="divider">
@@ -19,7 +28,7 @@
   <v-col cols="12" xl="5" lg="6">
    <v-img
       src="@/assets/img/about/TUMO.jpg"
-      lazy-src="@/assets/img/about/TUMO.jpg"
+      key = "@/assets/img/about/TUMO.jpg"
       class="grey lighten-2"
     >
       <template v-slot:placeholder>

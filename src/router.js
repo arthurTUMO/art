@@ -5,6 +5,7 @@ import About from './views/About.vue'
 import Browse from './views/Browse.vue'
 import Contact from './views/Contact.vue'
 import Display from './views/Display.vue'
+import Test from './views/Test.vue'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     }
   ]
 })

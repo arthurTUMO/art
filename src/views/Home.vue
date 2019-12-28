@@ -8,9 +8,10 @@
       cycle
       interval="10000"
       touch
-      :class="{'min-height=340': $vuetify.breakpoint.mdAndDown, 'min-height=500': $vuetify.breakpoint.mdAndUp}"
+      transition="none"
     >
       <v-carousel-item
+        lazy
         v-for="(item,i) in items"
         :key="i"
         :src="item.src"
@@ -98,6 +99,7 @@ import Cards from '../components/Cards.vue'
 export default {
   name: 'Home',
   data: () => ({
+    loading: true,
     fab: false,
     items: [
       {
@@ -145,7 +147,7 @@ export default {
     },
     toTop () {
       this.$vuetify.goTo(0)
-    }
+    },
   },
   computed: {
     options () {
