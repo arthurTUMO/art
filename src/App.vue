@@ -1,82 +1,57 @@
 <template>
   <v-app>
-    <v-app-bar height="50" app color="#3d3d3d" dark >
-      <v-btn class = "mx-3" width="0" height="0" to="/">
-      <img :src="require('@/assets/logo.png')" height="100"/>
-      </v-btn>
-      <v-toolbar-title class = "display-1">ART</v-toolbar-title>
+    <v-app-bar app color="#3d3d3d" dark >
+      <img class="clickable ml-0" :src="require('@/assets/logo.png')" height="100" @click="$router.push('/')">
+      <v-toolbar-title class = "hidden-sm-and-down clickable display-1" @click="$router.push('/')">ART</v-toolbar-title>
+
       <v-spacer></v-spacer>
+
+      <v-slide-x-reverse-transition>
+        <v-text-field
+        v-show="searchShow"
+          clearable
+          filled
+          hide-details
+          dark
+          label = "Search for Places"
+          v-model="search">
+        </v-text-field>
+      </v-slide-x-reverse-transition>
+      <v-btn icon @click="searchShow = !searchShow">
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
       <v-toolbar-items class="hidden-md-and-down">
         <v-btn class="mx-1" text to="/"> <v-icon class = "mr-2" color="white">mdi-home </v-icon> Home</v-btn>
         <v-btn class="mx-1" text to="/about"><v-icon class = "mr-2" color="white">mdi-information </v-icon> About</v-btn >
         <v-btn class="mx-1" text to="/browse"><v-icon class = "mr-2" color="white">mdi-map-marker </v-icon> Browse</v-btn >
-         <v-btn class="mx-1" text to="/contact"><v-icon class = "mr-2" color="white">mdi-help </v-icon> Contact</v-btn >
-        <v-btn class="mx-1" text to="/display"><v-icon class = "mr-2" color="white">mdi-human </v-icon> Display</v-btn >
-         <v-btn class="mx-1" text to="/test"><v-icon class = "mr-2" color="white">mdi-test </v-icon> Test</v-btn >
-    <v-toolbar color="#3d3d3d" flat height="auto">
-      <v-text-field
-        hide-details
-        prepend-icon="mdi-web"
-        single-line
-        label = "Search for Places"
-      ></v-text-field>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-    </v-toolbar>
+        <v-btn class="mx-1" text to="/contact"><v-icon class = "mr-2" color="white">mdi-help </v-icon> Contact</v-btn >
       </v-toolbar-items>
       <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
-      absolute
-      temporary
-      height="auto"
-      width="100%"
+      app
+      dark
     >
        <v-list
         dense
       >
-        <v-list-item-group
-          v-model="group"
-        >
-          <v-list-item to="/">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-home </v-icon> Home</v-list-item-title>
-          </v-list-item>
+        <v-list-item @click="$router.push('/');drawer=false;">
+          <v-list-item-title><v-icon class = "mr-2">mdi-home </v-icon> Home</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item to="/about">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-information </v-icon> About</v-list-item-title>
-          </v-list-item>
+        <v-list-item @click="$router.push('/about');drawer=false;">
+          <v-list-item-title><v-icon class = "mr-2">mdi-information </v-icon> About</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item to="/browse">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-map-marker </v-icon>Browse</v-list-item-title>
-          </v-list-item>
+        <v-list-item @click="$router.push('/browse');drawer=false;">
+          <v-list-item-title><v-icon class = "mr-2">mdi-map-marker </v-icon>Browse</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item to="/contact">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-help </v-icon>Contact</v-list-item-title>
-          </v-list-item>
-           <v-list-item to="/display">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-human </v-icon>Display(Single Page for Cards)</v-list-item-title>
-          </v-list-item>
-           <v-list-item to="/test">
-            <v-list-item-title><v-icon class = "mr-2" color="#3d3d3d">mdi-test </v-icon>TEST</v-list-item-title>
-          </v-list-item>
-    <v-toolbar>
-      <v-text-field
-        color="#3d3d3d"
-        hide-details
-        prepend-icon="mdi-web"
-        single-line
-       label = "Search for Places"
-      ></v-text-field>
-
-      <v-btn icon>
-        <v-icon color="#3d3d3d">mdi-magnify</v-icon>
-      </v-btn>
-    </v-toolbar>
-
-        </v-list-item-group>
+        <v-list-item @click="$router.push('/contact');drawer=false;">
+          <v-list-item-title><v-icon class = "mr-2">mdi-help </v-icon>Contact</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-content>
@@ -84,26 +59,58 @@
       <router-view/>
        </transition>
     </v-content>
+    <v-footer
+       dark
+       padless
+     >
+       <v-card
+         flat
+         tile
+         class="grey darken-2 white--text text-center"
+       >
+         <v-card-text>
+           <v-btn
+             v-for="icon in icons"
+             :key="icon"
+             class="mx-4 white--text"
+             icon
+           >
+             <v-icon size="24px">{{ icon }}</v-icon>
+           </v-btn>
+         </v-card-text>
+
+         <v-card-text class="white--text pt-0">
+           This site contains a wealth of information on various branches of Armenian art. It will take you to a unique world of art, where you will tangibly feel a centuries-old breath of Armenian art. You will be with the artists who bridge the past and present, you will know all about their period of life and left inharitance. Here you will find information not only about spiritual treasures, but also monuments representing the flight of armenian architectural thought, such as Zvartnots Cathedral, Republic Square, Opera and so on. So here is armenian art in all its luxury.
+         </v-card-text>
+
+         <v-divider></v-divider>
+
+         <v-card-text class="white--text grey darken-3">
+           {{ new Date().getFullYear() }} — <strong>TUMO WORKSHOP</strong>
+         </v-card-text>
+       </v-card>
+     </v-footer>
   </v-app>
 </template>
 <script>
 export default {
   data: () => ({
     drawer: false,
-    group: null
-  }),
-  watch: {
-    group () {
-      this.drawer = false
-    }
-  }
+    searchShow: false,
+    search: null,
+    icons: [
+      'mdi-facebook',
+      'mdi-twitter',
+      'mdi-google-plus',
+      'mdi-linkedin',
+      'mdi-instagram'
+    ]
+  })
 }
 </script>
 
 <style scoped>
-  @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
-  .v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close), .v-navigation-drawer--temporary:not(.v-navigation-drawer--close){
-    height: 100%;
-    position: fixed;
+  .clickable {
+    cursor: pointer;
   }
 </style>
