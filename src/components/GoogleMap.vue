@@ -29,8 +29,8 @@
 
 <script>
 export default {
-  name: "GoogleMap",
-  data() {
+  name: 'GoogleMap',
+  data () {
     return {
       // default to Montreal to keep it simple
       // change this to whatever makes sense
@@ -38,38 +38,38 @@ export default {
       markers: [],
       places: [],
       currentPlace: null
-    };
+    }
   },
 
-  mounted() {
-    this.geolocate();
+  mounted () {
+    this.geolocate()
   },
 
   methods: {
     // receives a place object via the autocomplete component
-    setPlace(place) {
-      this.currentPlace = place;
+    setPlace: function (place) {
+      this.currentPlace = place
     },
-    addMarker() {
+    addMarker: function () {
       if (this.currentPlace) {
         const marker = {
           lat: this.currentPlace.geometry.location.lat(),
           lng: this.currentPlace.geometry.location.lng()
-        };
-        this.markers.push({ position: marker });
-        this.places.push(this.currentPlace);
-        this.center = marker;
-        this.currentPlace = null;
+        }
+        this.markers.push({ position: marker })
+        this.places.push(this.currentPlace)
+        this.center = marker
+        this.currentPlace = null
       }
     },
-    geolocate: function() {
+    geolocate: function () {
       navigator.geolocation.getCurrentPosition(position => {
         this.center = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
-        };
-      });
+        }
+      })
     }
   }
-};
+}
 </script>

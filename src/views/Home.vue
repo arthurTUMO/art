@@ -147,7 +147,7 @@ export default {
     },
     toTop () {
       this.$vuetify.goTo(0)
-    },
+    }
   },
   computed: {
     options () {

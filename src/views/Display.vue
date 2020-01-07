@@ -41,7 +41,7 @@
             <v-col >
                 <h3>Excavations</h3>
                 <p>
-                   The ruins of Zvartnots remained buried until its remains were uncovered at the start of the twentieth century. The site was excavated between 1901 and 1907 under the direction of vardapet Khachik Dadyan, uncovering the foundations of the cathedral as well as the remains of the Catholicos palace and a winery. The excavations furthermore revealed that Zvartnots stood on the remnants of structures that dated back to reign of the Urartian king Rusa II.[1]  
+                   The ruins of Zvartnots remained buried until its remains were uncovered at the start of the twentieth century. The site was excavated between 1901 and 1907 under the direction of vardapet Khachik Dadyan, uncovering the foundations of the cathedral as well as the remains of the Catholicos palace and a winery. The excavations furthermore revealed that Zvartnots stood on the remnants of structures that dated back to reign of the Urartian king Rusa II.[1]
                 </p>
                 <h3>Influence</h3>
                 <p>
@@ -53,28 +53,24 @@
 </template>
 
 <script>
-import Cards from '../components/Cards.vue'
 export default {
   name: 'Display',
   data: () => ({
     items: [
       {
         src: require('../assets/img/slider/carpet.jpg'),
-        title: 'Zvartnots',
+        title: 'Zvartnots'
       },
       {
         src: require('../assets/img/slider/img1.jpg'),
-        title: 'Zvartnots',
+        title: 'Zvartnots'
       },
       {
         src: require('../assets/img/slider/zvartnoz.jpg'),
-        title: 'Zvartnots',
+        title: 'Zvartnots'
       }
     ]
   }),
-  components: {
-    Cards
-  },
   methods: {}
 }
 </script>

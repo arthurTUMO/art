@@ -71,17 +71,9 @@ export default {
     email_confirm: null,
     valid: true,
     emailRules: [
-      v => !!v || "E-mail is required",
-      v => /.+@.+/.test(v) || "E-mail must be valid"
+      v => !!v || 'E-mail is required',
+      v => /.+@.+/.test(v) || 'E-mail must be valid'
     ]
-  }),
-  computed: {
-    emailConfirmationRules() {
-      return [
-        () => this.email_confirm === this.email || "E-mail must match",
-        v => !!v || "Confirmation E-mail is required"
-      ];
-    }
-  }
-};
+  })
+}
 </script>
