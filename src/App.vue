@@ -33,6 +33,8 @@
       v-model="drawer"
       app
       dark
+      disable-route-watcher
+      disable-resize-watcher
     >
        <v-list
         dense

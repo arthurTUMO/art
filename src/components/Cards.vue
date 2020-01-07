@@ -1,6 +1,11 @@
 <template>
   <v-container>
-    <v-row outlined color="blue">
+    <v-row v-if="loading" class="text-center" justify="center">
+      <v-col cols="3">
+        <v-progress-circular indeterminate :size="70" :width="7" color="primary"></v-progress-circular>
+      </v-col>
+    </v-row>
+    <v-row v-else outlined color="blue">
       <v-col v-for="card in cards" :key="card.id" cols="12" lg="3" md="4" sm="6">
         <v-card shaped class="mx-auto overlay" max-width="400">
           <v-img class="white--text align-end" height="200px" :src="card.src">
@@ -11,7 +16,7 @@
             class="text--primary block-with-text"
           >{{ card.description }}</v-card-text>
           <v-card-actions>
-            <v-btn color="orange" text>Explore</v-btn>
+            <v-btn color="orange" text @click="$router.push({path: `display/${card.id}`})">Learn More</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -27,17 +32,17 @@ export default {
     color: String
   },
   data: () => ({
-    cards: null
+    cards: null,
+    loading: true
   }),
   methods: {
     getArt: async function () {
       let resp = await axios.get('https://armenian-art.herokuapp.com/getArt')
-      console.log(resp.data)
-      console.log(resp.data['cards'])
       this.cards = resp.data['cards']
+      this.loading = false
     }
   },
-  created () {
+  mounted () {
     this.getArt()
   }
 }

@@ -45,6 +45,22 @@ app.get('/getArt', (req, res) => {
   res.json(response)
 })
 
+app.get('/getInfo', (req, res) => {
+  let response = {
+    info: {
+      title: 'Zvartnots Cathedral',
+      description: 'Zvartnots was built at a time when much of Armenia had just recently been overrun by the Muslim Arabs who were progressively occupying the Sasanian Persia/Iran of which Armenia was a part at the time. Construction of the cathedral began in 643 under the guidance of Catholicos Nerses III (nicknamed Shinogh or the Builder). Dedicated to St. Gregory, it was located at the place where a meeting between King Trdat III and Gregory the Illuminator was supposed to have taken place. According to the medieval Armenian historian Movses Kaghankatvatsi, the cathedral was consecrated in 652.[1] From 653 to 659, Nerses was in Tayk and the construction of the cathedral continued under Anastas Akoratsi. Following the Arab occupation of Dvin and the intensifying wars between the Byzantine and Arab armies on the former\'s eastern borders, Nerses transferred the patriarchal palace of the Catholicos from Dvin to Zvartnots.[2] The exterior church design, featuring basket capitals with Ionic volute mounts, eagle capitals, and vine scroll friezes reveals the influence of Syrian and northern Mesopotamian architecture.[3] Zvartnots remained standing until the end of the tenth century, but historical sources are silent as to the cause of its collapse.[1] A close copy of the cathedral was erected at Ani out by Trdat the Architect under the reign of Gagik I Bagratuni during the final decade of the tenth century. The contemporary Armenian historian Stepanos Taronetsi referred to Zvartnots when describing the church that Gagik I had inaugurated as a large structure at Vałaršapat [Vagharshapat], dedicated to the same saint that had fallen into ruins.[4]',
+      images: [
+        'https://img.itinari.com/pages/images/original/c09765de-8aa1-4733-8bfd-c666bdc07978-istock-889725394.jpg?ch=DPR&dpr=1&w=1200&h=800&s=0751c09856822165f24b19062a70c39a',
+        'https://img.itinari.com/page/content/original/8dbf24e0-4bba-4b85-85b0-9afb02dcc07f-istock-873187630.jpg?ch=DPR&dpr=1&w=994&s=e78c518217bc0924472eae008208550f',
+        'https://pbs.twimg.com/media/C9RVeapWAAAvnOV.jpg'
+      ]
+    }
+  }
+  res.status(200)
+  res.json(response)
+})
+
 let port = process.env.PORT || 4000
 
 app.listen(port, function () {

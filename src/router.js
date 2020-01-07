@@ -29,7 +29,7 @@ export default new Router({
       component: Browse
     },
     {
-      path: '/display',
+      path: '/display/:id',
       name: 'display',
       component: Display
     },
