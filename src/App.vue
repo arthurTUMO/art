@@ -26,6 +26,7 @@
         <v-btn class="mx-1" text to="/about"><v-icon class = "mr-2" color="white">mdi-information </v-icon> About</v-btn >
         <v-btn class="mx-1" text to="/browse"><v-icon class = "mr-2" color="white">mdi-map-marker </v-icon> Browse</v-btn >
         <v-btn class="mx-1" text to="/contact"><v-icon class = "mr-2" color="white">mdi-help </v-icon> Contact</v-btn >
+        <v-btn class="mx-1" text to="/submit"><v-icon class = "mr-2" color="white">mdi-plus </v-icon> Submit</v-btn >
       </v-toolbar-items>
       <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -53,6 +54,10 @@
 
         <v-list-item @click="$router.push('/contact');drawer=false;">
           <v-list-item-title><v-icon class = "mr-2">mdi-help </v-icon>Contact</v-list-item-title>
+        </v-list-item>
+
+        <v-list-item @click="$router.push('/submit');drawer=false;">
+          <v-list-item-title><v-icon class = "mr-2">mdi-plus </v-icon>Submit</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

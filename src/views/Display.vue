@@ -54,7 +54,10 @@ export default {
   }),
   methods: {
     getInfo: async function () {
-      let resp = await axios.get('https://arm-art.herokuapp.com/getInfo')
+      const params = {
+        id: this.$route.params.id
+      }
+      let resp = await axios.get('https://arm-art.herokuapp.com/getInfo', { params })
       this.info = resp.data['info']
       this.loading = false
     }

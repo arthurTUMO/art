@@ -8,7 +8,7 @@
     <v-row v-else outlined color="blue">
       <v-col v-for="card in cards" :key="card.id" cols="12" lg="3" md="4" sm="6">
         <v-card shaped class="mx-auto overlay" max-width="400">
-          <v-img class="white--text align-end" height="200px" :src="card.src">
+          <v-img class="white--text align-end" height="200px" :src="card.images[0]">
             <v-card-title>{{ card.title }}</v-card-title>
           </v-img>
           <v-card-subtitle class="pb-0">Number {{ card.id }}</v-card-subtitle>
@@ -37,7 +37,7 @@ export default {
   }),
   methods: {
     getArt: async function () {
-      let resp = await axios.get('https://armenian-art.herokuapp.com/getArt')
+      let resp = await axios.get('https://arm-art.herokuapp.com/getArt')
       this.cards = resp.data['cards']
       this.loading = false
     }
