@@ -32,7 +32,7 @@
       </v-carousel-item>
     </v-carousel>
     <div class="divider">
-      <marquee v-for="fact in facts" :key="fact.id" :class="{'display-0': $vuetify.breakpoint.smAndDown, 'display-1': $vuetify.breakpoint.smAndUp}" class = "text-uppercase mt-2 py-3" behavior="scroll" direction="left" scrolldelay="90">{{ fact.text }}
+      <marquee v-for="fact in facts" :key="fact.id" :class="{'display-0': $vuetify.breakpoint.smAndDown, 'display-1': $vuetify.breakpoint.smAndUp}" class = "text-uppercase mt-2 py-3" behavior="scroll" direction="left" scrollamount="10">{{ fact.text }}
       </marquee>
     </div>
       <v-parallax
